@@ -1,0 +1,8 @@
+{
+  "name": "noName-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/fnoquiq/noName-api.git",
+  "author": "fnoquiq <gabriel_t_ana@hotmail.com>",
+  "license": "MIT"
+}
