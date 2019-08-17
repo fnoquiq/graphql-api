@@ -1,0 +1,13 @@
+endpoint: ${env:PRISMA_ENDPOINT}/${env:PRISMA_SERVICE}/${env:PRISMA_STAGE}
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./../src/generated/prisma-client
+  - generator: graphql-schema
+    output: ./../src/generated/graphql-schema/prisma.graphql
+
+hooks:
+  post-deploy:
+    - echo "Generating prisma files"
+    - prisma generate
