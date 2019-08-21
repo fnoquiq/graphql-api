@@ -1,4 +1,78 @@
 type User {
   id: ID! @id
+  first_name: String! @default(value: "Unknown")
+  last_name: String
+  username: String! @unique
+  password: String!
+  email: [String!]! @unique
+  phone: [String]! @unique
+  created_at: DateTime! @created_at
+  updated_at: DateTime! @updated_at
+}
+
+type Project {
+  id: ID! @id
+  name: String! @default(value: "New Project")
+  owner: User!
+  collaborators: [CollaboratorsRole]!
+  status: [Status!]!
+  created_at: DateTime! @created_at
+  updated_at: DateTime! @updated_at
+}
+
+type Status {
+  id: ID! @id
   name: String!
+  cards: [Card]!
+  created_at: DateTime! @created_at
+  updated_at: DateTime! @updated_at
+}
+
+type CollaboratorsPermissions {
+  user: User!
+  permissions: [Permission]!
+  created_at: DateTime! @created_at
+  updated_at: DateTime! @updated_at
+}
+
+enum Permission {
+  CREATE_CARDS
+  UPDATE_CARDS
+  DELETE_CARDS
+  CREATE_COLLABORATORS
+  UPDATE_COLLABORATORS
+  DELETE_COLLABORATORS
+}
+
+type Card {
+  id: ID! @id
+  name: String!
+  responsible: [User]!
+  sector: [Sector]!
+  requirement: [Card]!
+  description: String
+  complexity: Complexity! @default(value: "EASY")
+  priority: Priority! @default(value: "LOW")
+  status: Status!
+  delivery_date: DateTime
+  created_at: DateTime! @created_at
+  updated_at: DateTime! @updated_at
+}
+
+enum Sector {
+  BACK_END
+  FRONT_END
+  DESIGN
+}
+
+enum Complexity {
+  HARD
+  MEDIUM
+  EASY
+}
+
+enum Priority {
+  HIGH
+  MEDIUM
+  LOW
 }
