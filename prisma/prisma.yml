@@ -10,4 +10,3 @@ generate:
 hooks:
   post-deploy:
     - echo "Generating prisma files"
-    - prisma generate
