@@ -1,11 +1,14 @@
 endpoint: ${env:PRISMA_ENDPOINT}/${env:PRISMA_SERVICE}/${env:PRISMA_STAGE}
-datamodel: datamodel.prisma
+datamodel:
+  - ./../src/user/user.prisma
+  - ./../src/project/project.prisma
+  - ./../src/card/card.prisma
 
 generate:
   - generator: javascript-client
-    output: ./../src/generated/prisma-client
+    output: ./generated/prisma-client
   - generator: graphql-schema
-    output: ./../src/generated/graphql-schema/prisma.graphql
+    output: ./generated/graphql-schema/prisma.graphql
 
 hooks:
   post-deploy:
