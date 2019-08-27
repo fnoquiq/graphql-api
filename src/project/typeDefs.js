@@ -32,6 +32,11 @@ const typeDefs = `
     UPDATE_COLLABORATORS
     DELETE_COLLABORATORS
   }
+
+  type Query {
+    project(id: ID!): Project
+    projects: [Project]!
+  }
 `;
 
 module.exports = typeDefs;

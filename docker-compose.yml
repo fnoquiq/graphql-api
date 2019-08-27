@@ -29,7 +29,6 @@ services:
             user: ${POSTGRES_USER}
             password: ${POSTGRES_PASSWORD}
             migrations: true
-            rawAccess: true
     depends_on:
       - postgres
 
