@@ -13,10 +13,6 @@ const typeDefs = `
   type Query {
     user(id: ID!): User
     users: [User]!
-    project(id: ID!): Project
-    projects: [Project]!
-    card(id: ID!): Card
-    cards: [Card]!
   }
 `;
 
