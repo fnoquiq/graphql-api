@@ -6,10 +6,6 @@ const typeDefs = `
 
   scalar Date
   scalar Time
-
-  type Query {
-    hello: String!
-  }
 `;
 
 module.exports = typeDefs;

@@ -8,4 +8,4 @@ const schema = makeExecutableSchema({
   resolvers
 });
 
-module.exports = { schema };
+module.exports = schema;
