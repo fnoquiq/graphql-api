@@ -1,7 +1,8 @@
 const { GraphQLServer } = require("graphql-yoga");
 const Binding = require("prisma-binding");
 const { prisma } = require("./../../prisma/generated/prisma-client");
-const resolvers = require("./resolvers");
+
+const schema = require("./graphql/");
 
 const env = process.env;
 const endpoint = `${env.PRISMA_ENDPOINT}/${env.PRISMA_SERVICE}/${
@@ -9,8 +10,7 @@ const endpoint = `${env.PRISMA_ENDPOINT}/${env.PRISMA_SERVICE}/${
 }`;
 
 const server = new GraphQLServer({
-  typeDefs: `${__dirname}/schema.graphql`,
-  resolvers,
+  schema,
   context: request => ({
     ...request,
     db: new Binding.Prisma({
