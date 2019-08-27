@@ -1,4 +1,4 @@
-export default `
+const typeDefs = `
   type User {
     id: ID!
     first_name: String!
@@ -19,3 +19,5 @@ export default `
     cards: [Card]!
   }
 `;
+
+module.exports = typeDefs;

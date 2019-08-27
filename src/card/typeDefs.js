@@ -1,4 +1,4 @@
-export default `
+const typeDefs = `
   type Card {
     id: ID!
     name: String!
@@ -32,3 +32,5 @@ export default `
     LOW
   }
 `;
+
+module.exports = typeDefs;

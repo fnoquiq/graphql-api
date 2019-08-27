@@ -1,4 +1,4 @@
-export default `
+const typeDefs = `
   type Project {
     id: ID!
     name: String!
@@ -33,3 +33,5 @@ export default `
     DELETE_COLLABORATORS
   }
 `;
+
+module.exports = typeDefs;
