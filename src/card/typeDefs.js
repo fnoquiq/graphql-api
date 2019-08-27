@@ -31,6 +31,11 @@ const typeDefs = `
     MEDIUM
     LOW
   }
+
+  type Query {
+    card(id: ID!): Card
+    cards: [Card]!
+  }
 `;
 
 module.exports = typeDefs;
