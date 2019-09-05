@@ -16,8 +16,14 @@ const typeDefs = `
   }
 
   type Query {
+    '''
+    Retorna o usuário logado
+    '''
     user(): User
-    users: [User]!
+    '''
+    Através de uma String é possivel procurar usuários pelo first_name, username, email, phone
+    '''
+    userSearch(query: String!): [User]!
   }
 
 
