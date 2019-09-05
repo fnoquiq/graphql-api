@@ -1,10 +1,10 @@
 const user = require("./querys/user");
-const users = require("./querys/users");
+const userSearch = require("./querys/userSearch");
 
 const resolvers = {
   Query: {
     user,
-    users
+    userSearch
   }
 };
 

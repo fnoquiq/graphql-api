@@ -10,10 +10,23 @@ const typeDefs = `
     updated_at: DateTime!
   }
 
-  type Query {
-    user(id: ID!): User
-    users: [User]!
+  type AuthPayload {
+    token: String!
+    user: User!
   }
+
+  type Query {
+    """
+    Retorna o usuário logado
+    """
+    user: User
+    """
+    Através de uma String é possivel procurar usuários pelo first_name, last_name e username.
+    """
+    userSearch(query: String!): [User]!
+  }
+
+
 `;
 
 module.exports = typeDefs;
