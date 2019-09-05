@@ -1,10 +1,8 @@
-const card = require("./querys/card");
-const cards = require("./querys/cards");
+const cardById = require("./querys/cardById");
 
 const resolvers = {
   Query: {
-    card,
-    cards
+    cardById
   }
 };
 

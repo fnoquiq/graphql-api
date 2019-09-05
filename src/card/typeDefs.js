@@ -33,8 +33,10 @@ const typeDefs = `
   }
 
   type Query {
-    card(id: ID!): Card
-    cards: [Card]!
+    """
+    Através de um id é possivel buscar um card.
+    """
+    cardById(id: ID!): Card
   }
 `;
 
