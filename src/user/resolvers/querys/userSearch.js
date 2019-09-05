@@ -1,7 +1,16 @@
-const { prisma } = require("./../../../../prisma/generated/prisma-client");
+function userSearch(parent, { query }, context, info) {
+  let OR = [
+    { first_name_contains: query },
+    { last_name_contains: query },
+    { username_contains: query }
+  ];
 
-function userSearch(parent, args, context, info) {
-  return prisma.users();
+  return context.db.query.users(
+    {
+      where: { OR }
+    },
+    info
+  );
 }
 
-module.exports = users;
+module.exports = userSearch;
