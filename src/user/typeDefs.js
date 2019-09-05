@@ -10,10 +10,17 @@ const typeDefs = `
     updated_at: DateTime!
   }
 
+  type AuthPayload {
+    token: String!
+    user: User!
+  }
+
   type Query {
-    user(id: ID!): User
+    user(): User
     users: [User]!
   }
+
+
 `;
 
 module.exports = typeDefs;
