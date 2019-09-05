@@ -34,7 +34,13 @@ const typeDefs = `
   }
 
   type Query {
-    project(id: ID!): Project
+    """
+    Através de um id é possivel buscar um projeto.
+    """
+    projectById(id: ID!): Project
+    """
+    Retorna uma lista de projetos pertecentes ao usuário logado
+    """
     projects: [Project]!
   }
 `;
