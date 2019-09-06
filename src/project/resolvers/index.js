@@ -1,5 +1,5 @@
-const projectById = require("./querys/projectById");
-const projects = require("./querys/projects");
+const projectById = require("./queries/projectById");
+const projects = require("./queries/projects");
 
 const resolvers = {
   Query: {

@@ -1,4 +1,4 @@
-const cardById = require("./querys/cardById");
+const cardById = require("./queries/cardById");
 
 const resolvers = {
   Query: {
