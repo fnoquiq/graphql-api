@@ -1,9 +1,9 @@
-const project = require("./querys/project");
+const projectById = require("./querys/projectById");
 const projects = require("./querys/projects");
 
 const resolvers = {
   Query: {
-    project,
+    projectById,
     projects
   }
 };
