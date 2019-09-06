@@ -1,7 +1,7 @@
-function userById(parent, args, context, info) {
+function userById(parent, {id}, context, info) {
   return context.db.query.user(
     {
-      where: { id: args.id }
+      where: { id }
     },
     info
   );
