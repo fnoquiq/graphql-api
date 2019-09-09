@@ -1,5 +1,5 @@
 const { GraphQLServer } = require("graphql-yoga");
-const { PRISMA_CONFIG } = require("./../../config/default")
+const { PRISMA_CONFIG } = require("./../../config/prisma")
 
 const schema = require("./graphql/");
 
