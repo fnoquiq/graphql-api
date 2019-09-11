@@ -1,8 +1,8 @@
-const { mergeResolvers } = require("merge-graphql-schemas");
+const { mergeResolvers } = require('merge-graphql-schemas');
 
-const user = require("../../user/resolvers/");
-const project = require("../../project/resolvers/");
-const card = require("../../card/resolvers/");
+const user = require('../../user/resolvers/');
+const project = require('../../project/resolvers/');
+const card = require('../../card/resolvers/');
 
 const resolvers = [user, project, card];
 

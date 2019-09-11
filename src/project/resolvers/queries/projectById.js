@@ -1,8 +1,8 @@
-const { prisma } = require("./../../../../prisma/generated/prisma-client");
+const { prisma } = require('./../../../../prisma/generated/prisma-client');
 
 function projectById(parent, args, context, info) {
   return prisma.project({
-    id: args.id
+    id: args.id,
   });
 }
 
