@@ -1,6 +1,6 @@
-const { server } = require("./server/server.js");
+const { server } = require('./server/server.js');
 
-const API_PORT = 4000
+const API_PORT = 4000;
 
 server
   .start()

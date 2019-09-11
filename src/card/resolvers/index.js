@@ -1,9 +1,9 @@
-const cardById = require("./queries/cardById");
+const cardById = require('./queries/cardById');
 
 const resolvers = {
   Query: {
-    cardById
-  }
+    cardById,
+  },
 };
 
 module.exports = resolvers;
