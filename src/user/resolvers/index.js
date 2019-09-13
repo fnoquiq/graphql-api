@@ -1,6 +1,6 @@
-const user = require('./queries/user');
-const userSearch = require('./queries/userSearch');
-const userById = require('./queries/userById');
+import user from './queries/user';
+import userSearch from './queries/userSearch';
+import userById from './queries/userById';
 
 const resolvers = {
   Query: {
@@ -10,4 +10,4 @@ const resolvers = {
   },
 };
 
-module.exports = resolvers;
+export default resolvers;

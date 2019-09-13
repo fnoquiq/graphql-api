@@ -8,4 +8,4 @@ const typeDefs = `
   scalar Time
 `;
 
-module.exports = typeDefs;
+export default typeDefs;

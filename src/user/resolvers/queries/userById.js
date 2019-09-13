@@ -3,8 +3,8 @@ function userById(parent, { id }, context, info) {
     {
       where: { id },
     },
-    info,
+    info
   );
 }
 
-module.exports = userById;
+export default userById;

@@ -1,4 +1,4 @@
-const { getUserId } = require('./../../../user/auth');
+import getUserId from '../../../user/auth';
 
 function projects(parent, args, context, info) {
   const userId = getUserId(context);
@@ -6,10 +6,10 @@ function projects(parent, args, context, info) {
     {
       where: { owner: userId },
     },
-    info,
+    info
   );
 
   return myOwnerProjects;
 }
 
-module.exports = projects;
+export default projects;

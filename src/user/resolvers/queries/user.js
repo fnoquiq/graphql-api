@@ -1,4 +1,4 @@
-const { getUserId } = require('./../../auth');
+import getUserId from '../../auth';
 
 function user(parent, args, context, info) {
   const userId = getUserId(context);
@@ -6,10 +6,10 @@ function user(parent, args, context, info) {
     {
       where: { id: userId },
     },
-    info,
+    info
   );
 
   return myUser;
 }
 
-module.exports = user;
+export default user;

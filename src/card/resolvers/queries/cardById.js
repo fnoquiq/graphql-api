@@ -3,8 +3,8 @@ function cards(parent, { id }, context, info) {
     {
       where: { id },
     },
-    info,
+    info
   );
 }
 
-module.exports = cards;
+export default cards;
