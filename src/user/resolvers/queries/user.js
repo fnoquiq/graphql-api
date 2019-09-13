@@ -1,13 +1,15 @@
+const { getUserId } = require('./../../auth');
+
 function user(parent, args, context, info) {
   const userId = getUserId(context);
-  const user = context.db.query.user(
+  const myUser = context.db.query.user(
     {
-      where: { id: userId }
+      where: { id: userId },
     },
-    info
+    info,
   );
 
-  return user;
+  return myUser;
 }
 
 module.exports = user;

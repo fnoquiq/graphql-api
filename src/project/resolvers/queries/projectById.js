@@ -1,9 +1,10 @@
-const { prisma } = require("./../../../../prisma/generated/prisma-client");
-
-function projectById(parent, args, context, info) {
-  return prisma.project({
-    id: args.id
-  });
+function projectById(parent, { id }, context, info) {
+  return context.db.query.project(
+    {
+      where: { id },
+    },
+    info,
+  );
 }
 
 module.exports = projectById;

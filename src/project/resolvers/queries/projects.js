@@ -1,7 +1,15 @@
-const { prisma } = require("./../../../../prisma/generated/prisma-client");
+const { getUserId } = require('./../../../user/auth');
 
 function projects(parent, args, context, info) {
-  return prisma.projects();
+  const userId = getUserId(context);
+  const myOwnerProjects = context.db.query.user(
+    {
+      where: { owner: userId },
+    },
+    info,
+  );
+
+  return myOwnerProjects;
 }
 
 module.exports = projects;

@@ -1,11 +1,11 @@
-const projectById = require("./queries/projectById");
-const projects = require("./queries/projects");
+const projectById = require('./queries/projectById');
+const projects = require('./queries/projects');
 
 const resolvers = {
   Query: {
     projectById,
-    projects
-  }
+    projects,
+  },
 };
 
 module.exports = resolvers;

@@ -1,9 +1,9 @@
-const { mergeTypes } = require("merge-graphql-schemas");
+const { mergeTypes } = require('merge-graphql-schemas');
 
-const baseSchema = require("./baseSchema");
-const userSchema = require("../../user/typeDefs");
-const projectSchema = require("../../project/typeDefs");
-const cardSchema = require("../../card/typeDefs");
+const baseSchema = require('./baseSchema');
+const userSchema = require('../../user/typeDefs');
+const projectSchema = require('../../project/typeDefs');
+const cardSchema = require('../../card/typeDefs');
 
 const typeDefs = [baseSchema, userSchema, projectSchema, cardSchema];
 const schema = mergeTypes(typeDefs, { all: true });
