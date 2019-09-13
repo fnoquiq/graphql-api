@@ -3,7 +3,7 @@ function cards(parent, { id }, context, info) {
     {
       where: { id },
     },
-    info
+    info,
   );
 }
 

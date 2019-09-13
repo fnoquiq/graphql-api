@@ -9,7 +9,7 @@ function userSearch(parent, { query }, context, info) {
     {
       where: { OR },
     },
-    info
+    info,
   );
 }
 
