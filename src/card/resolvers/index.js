@@ -1,4 +1,4 @@
-const cardById = require('./queries/cardById');
+import cardById from './queries/cardById';
 
 const resolvers = {
   Query: {
@@ -6,4 +6,4 @@ const resolvers = {
   },
 };
 
-module.exports = resolvers;
+export default resolvers;

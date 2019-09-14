@@ -30,7 +30,6 @@ const typeDefs = `
     userById(id: ID!): User
   }
 
-
 `;
 
-module.exports = typeDefs;
+export default typeDefs;

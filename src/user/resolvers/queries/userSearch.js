@@ -13,4 +13,4 @@ function userSearch(parent, { query }, context, info) {
   );
 }
 
-module.exports = userSearch;
+export default userSearch;

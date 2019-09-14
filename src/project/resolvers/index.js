@@ -1,5 +1,5 @@
-const projectById = require('./queries/projectById');
-const projects = require('./queries/projects');
+import projectById from './queries/projectById';
+import projects from './queries/projects';
 
 const resolvers = {
   Query: {
@@ -8,4 +8,4 @@ const resolvers = {
   },
 };
 
-module.exports = resolvers;
+export default resolvers;

@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
 function getUserId(context) {
   const Authorization = context.request.get('Authorization');
@@ -11,6 +11,4 @@ function getUserId(context) {
   throw new Error('Not authenticated!');
 }
 
-module.exports = {
-  getUserId,
-};
+export default getUserId;

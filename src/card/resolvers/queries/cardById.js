@@ -7,4 +7,4 @@ function cards(parent, { id }, context, info) {
   );
 }
 
-module.exports = cards;
+export default cards;

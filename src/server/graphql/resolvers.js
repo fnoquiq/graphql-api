@@ -1,11 +1,11 @@
-const { mergeResolvers } = require('merge-graphql-schemas');
+import { mergeResolvers } from 'merge-graphql-schemas';
 
-const user = require('../../user/resolvers/');
-const project = require('../../project/resolvers/');
-const card = require('../../card/resolvers/');
+import user from '../../user/resolvers';
+import project from '../../project/resolvers';
+import card from '../../card/resolvers';
 
 const resolvers = [user, project, card];
 
 const resolversMerged = mergeResolvers(resolvers);
 
-module.exports = resolversMerged;
+export default resolversMerged;

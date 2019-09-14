@@ -7,4 +7,4 @@ function userById(parent, { id }, context, info) {
   );
 }
 
-module.exports = userById;
+export default userById;

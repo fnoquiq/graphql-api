@@ -3,8 +3,8 @@ function projectById(parent, { id }, context, info) {
     {
       where: { id },
     },
-    info,
+    info
   );
 }
 
-module.exports = projectById;
+export default projectById;
