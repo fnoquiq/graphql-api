@@ -60,7 +60,7 @@ const typeDefs = `
     """
     updateUser(
       first_name: String!
-      last_name: String
+      last_name: String!
       username: String!
     ): User
 

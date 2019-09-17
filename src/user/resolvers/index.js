@@ -4,6 +4,7 @@ import userById from './queries/userById';
 
 import createUser from './mutations/createUser';
 import login from './mutations/login';
+import updateUser from './mutations/updateUser';
 
 const resolvers = {
   Query: {
@@ -14,6 +15,7 @@ const resolvers = {
   Mutation: {
     createUser,
     login,
+    updateUser,
   },
 };
 
