@@ -4,24 +4,24 @@ type Project {
   owner: User!
   collaborators: [CollaboratorsPermissions]!
   status: [Status!]!
-  created_at: DateTime! @created_at
-  updated_at: DateTime! @updated_at
+  created_at: DateTime! @createdAt
+  updated_at: DateTime! @updatedAt
 }
 
 type Status {
   id: ID! @id
   name: String!
   cards: [Card]!
-  created_at: DateTime! @created_at
-  updated_at: DateTime! @updated_at
+  created_at: DateTime! @createdAt
+  updated_at: DateTime! @updatedAt
 }
 
 type CollaboratorsPermissions {
   id: ID! @id
   user: User!
   permissions: [Permission]! @scalarList(strategy: RELATION)
-  created_at: DateTime! @created_at
-  updated_at: DateTime! @updated_at
+  created_at: DateTime! @createdAt
+  updated_at: DateTime! @updatedAt
 }
 
 enum Permission {

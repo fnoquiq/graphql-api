@@ -9,8 +9,3 @@ generate:
     output: ./generated/prisma-client
   - generator: graphql-schema
     output: ./generated/graphql-schema/prisma.graphql
-
-hooks:
-  post-deploy:
-    - echo "Generating prisma files"
-    - prisma generate
